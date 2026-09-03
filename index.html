@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francisco Alcalá — Digital Product Owner &amp; Senior Insights Analyst</title>
+<meta name="description" content="Digital Product Owner &amp; Senior Insights Analyst. 10+ years turning complex data into product and business decisions, at Pfizer, MetLife and CNP Santander.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Francisco Alcalá — Digital Product Owner &amp; Senior Insights Analyst">
+<meta property="og:description" content="10+ years turning complex data into product and business decisions. AI-assisted analytics, data engineering and BI, at Pfizer, MetLife and CNP Santander.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Francisco Alcalá — Digital Product Owner &amp; Senior Insights Analyst">
+<meta name="twitter:description" content="10+ years turning complex data into product and business decisions.">
+<meta name="theme-color" content="#0E141F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0E141F;
+    --panel: #161F2C;
+    --panel-2: #1C2635;
+    --line: #2B3648;
+    --text: #EDF2F8;
+    --muted: #9BA8BA;
+    --gold: #CDA33B;
+    --gold-soft: rgba(205,163,59,0.14);
+    --radius: 4px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--ink);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,h2,h3{
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .mono{ font-family: 'IBM Plex Mono', monospace; }
+  a{ color: inherit; }
+
+  /* ---------- layout shell ---------- */
+
+  html{ max-width: 100%; }
+
+  .shell{
+    display: grid;
+    grid-template-columns: 232px 1fr;
+    min-height: 100vh;
+  }
+
+  .rail, .main{ min-width: 0; }
+
+  .rail{
+    border-right: 1px solid var(--line);
+    padding: 40px 28px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .rail-top .id-mark{
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .rail-top .id-role{
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  .lang-switch{
+    display: flex;
+    gap: 2px;
+    margin-top: 22px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 3px;
+    width: fit-content;
+  }
+
+  .lang-switch button{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    padding: 5px 11px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+
+  .lang-switch button:hover{ color: var(--text); }
+
+  .lang-switch button.active{
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  .rail-nav{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .rail-nav a{
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 9px 10px;
+    margin: 0 -10px;
+    border-radius: var(--radius);
+    transition: color .15s ease, background .15s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .rail-nav a::before{
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--line);
+    transition: background .15s ease;
+    flex-shrink: 0;
+  }
+
+  .rail-nav a:hover, .rail-nav a.active{
+    color: var(--text);
+    background: var(--panel);
+  }
+
+  .rail-nav a.active::before{ background: var(--gold); }
+
+  .rail-bottom{ font-size: 12px; color: var(--muted); }
+
+  .rail-bottom .langs{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+  }
+
+  .rail-bottom .langs span b{ color: var(--text); font-weight: 500; }
+
+  .print-btn{
+    margin-top: 16px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    padding: 9px 10px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color .15s ease, color .15s ease;
+  }
+
+  .print-btn:hover{ border-color: var(--gold); color: var(--text); }
+
+  .main{ padding: 56px 64px 90px; max-width: 980px; }
+  section{ scroll-margin-top: 32px; }
+
+  /* ---------- hero ---------- */
+
+  .hero h1{ font-size: 46px; }
+
+  .hero-role{
+    font-size: 18px;
+    color: var(--gold);
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  .hero-profile{
+    margin-top: 22px;
+    max-width: 640px;
+    color: var(--muted);
+    font-size: 15.5px;
+  }
+
+  .kpi-row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 40px;
+  }
+
+  .kpi{ background: var(--panel); padding: 22px 20px; }
+
+  .kpi-num{
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .kpi-label{ font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+
+  .insight-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 40px;
+  }
+
+  .insight-card{
+    background: var(--panel-2);
+    padding: 22px 20px;
+    border-top: 2px solid var(--gold);
+  }
+
+  .insight-card h3{
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .insight-card p{
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ---------- section headers ---------- */
+
+  .sec-head{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 88px;
+    margin-bottom: 26px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 14px;
+  }
+
+  .sec-head h2{ font-size: 24px; }
+  .sec-head .sec-count{ font-size: 12.5px; color: var(--muted); }
+
+  /* ---------- filters ---------- */
+
+  .filters{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+
+  .chip{
+    font-size: 13px;
+    color: var(--muted);
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 7px 14px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all .15s ease;
+    user-select: none;
+  }
+
+  .chip:hover{ color: var(--text); }
+
+  .chip.active{
+    color: var(--ink);
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
+  /* ---------- experience ---------- */
+
+  .job{
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 28px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+    transition: opacity .2s ease;
+  }
+
+  .job.hidden{ display: none; }
+  .job-when{ font-size: 12.5px; color: var(--muted); }
+  .job-when .dates{ display: block; margin-top: 4px; }
+  .job-title{ font-size: 17px; font-weight: 600; color: var(--text); }
+  .job-org{ font-size: 14px; color: var(--muted); margin-top: 2px; }
+  .job-tags{ display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+
+  .tag{
+    font-size: 11px;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    padding: 2px 8px;
+    border-radius: 100px;
+  }
+
+  .job-bullets{
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .job-bullets li{
+    font-size: 14.5px;
+    color: #CBD5E1;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .job-bullets li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    background: var(--line);
+    border-radius: 50%;
+  }
+
+  /* ---------- skills ---------- */
+
+  .skill-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .skill-panel{ background: var(--panel); padding: 24px; }
+
+  .skill-panel h3{
+    font-size: 15px;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .skill-panel ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .skill-panel li{ font-size: 14px; color: #CBD5E1; }
+
+  /* ---------- education / certs timeline ---------- */
+
+  .timeline{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--line);
+    margin-left: 4px;
+  }
+
+  .subsection-title{
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--gold);
+    margin: 0 0 18px 0;
+  }
+
+  .subsection-title-spaced{ margin-top: 44px; }
+
+  .tl-item{ position: relative; padding: 0 0 28px 26px; }
+
+  .tl-item::before{
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--ink);
+    border: 2px solid var(--gold);
+  }
+
+  .tl-item:last-child{ padding-bottom: 0; }
+  .tl-when{ font-size: 12px; color: var(--muted); }
+  .tl-title{ font-size: 15px; font-weight: 600; margin-top: 3px; }
+  .tl-org{ font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+
+  /* ---------- contact ---------- */
+
+  .contact-panel{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 36px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .contact-panel h2{ font-size: 22px; margin-bottom: 8px; }
+  .contact-panel p{ color: var(--muted); font-size: 14px; margin: 0; max-width: 380px; }
+  .contact-links{ display: flex; flex-direction: column; gap: 10px; }
+
+  .contact-links a{
+    font-size: 14.5px;
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-links a svg{
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    stroke: var(--gold);
+  }
+
+  .contact-row{ display: flex; align-items: center; gap: 10px; }
+
+  .copy-btn{
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: border-color .15s ease;
+  }
+
+  .copy-btn svg{ width: 13px; height: 13px; stroke: var(--muted); }
+
+  .copy-btn:hover{ border-color: var(--gold); }
+  .copy-btn:hover svg{ stroke: var(--gold); }
+
+  .copy-btn.copied svg{ stroke: var(--gold); }
+
+  .footnote{
+    margin-top: 60px;
+    font-size: 12.5px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+  }
+
+  /* ---------- responsive ---------- */
+
+  @media (max-width: 900px){
+    .shell{ grid-template-columns: 1fr; }
+    .rail{
+      position: relative;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--line);
+      padding: 24px 24px 18px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .rail-top{ display: flex; align-items: center; gap: 18px; flex-wrap: wrap; min-width: 0; width: 100%; }
+    .lang-switch{ margin-top: 0; }
+    .rail-nav{
+      margin-top: 0;
+      flex-direction: row;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      gap: 4px;
+      width: 100%;
+      order: 3;
+    }
+    .rail-nav a{ white-space: nowrap; padding: 10px 12px; }
+    .rail-bottom{ display: none; }
+    .main{ padding: 40px 22px 70px; }
+    .hero h1{ font-size: 32px; }
+    .kpi-row{ grid-template-columns: repeat(2,1fr); }
+    .insight-grid{ grid-template-columns: 1fr; }
+    .job{ grid-template-columns: 1fr; gap: 6px; }
+    .skill-grid{ grid-template-columns: 1fr; }
+    .contact-panel{ flex-direction: column; align-items: flex-start; padding: 28px; }
+    .chip{ padding: 9px 15px; }
+  }
+
+  @media (max-width: 480px){
+    .main{ padding: 32px 16px 60px; }
+    .hero h1{ font-size: 26px; }
+    .hero-role{ font-size: 15px; }
+    .hero-profile{ font-size: 14.5px; }
+    .kpi-row{ grid-template-columns: 1fr 1fr; }
+    .kpi{ padding: 16px 14px; }
+    .kpi-num{ font-size: 24px; }
+    .sec-head{ margin-top: 56px; }
+    .sec-head h2{ font-size: 20px; }
+    .job-when{ display: flex; gap: 6px; }
+    .job-when .dates{ margin-top: 0; }
+    .contact-panel{ padding: 22px; }
+  }
+
+  @media print{
+    .rail{ display: none; }
+    .shell{ grid-template-columns: 1fr; }
+    .main{ padding: 0 12px; max-width: 100%; }
+    body{ background: white; color: black; }
+    .kpi, .panel, .skill-panel, .contact-panel, .job{ background: white !important; }
+    .kpi-num, .hero-role, .sec-head, .job-title{ color: black !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <aside class="rail">
+    <div class="rail-top">
+      <div class="id-mark">Francisco Alcalá</div>
+      <div class="id-role">Digital Product Owner<br>Senior Insights Analyst</div>
+
+      <div class="lang-switch" role="group" aria-label="Idioma / Language / Langue">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="es">ES</button>
+        <button data-lang="fr">FR</button>
+      </div>
+
+      <nav class="rail-nav">
+        <a href="#perfil" class="active" data-i18n="nav_perfil">Perfil</a>
+        <a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a>
+        <a href="#habilidades" data-i18n="nav_habilidades">Habilidades</a>
+        <a href="#formacion" data-i18n="nav_formacion">Formación</a>
+        <a href="#adicional" data-i18n="nav_adicional">Información adicional</a>
+        <a href="#contacto" data-i18n="nav_contacto">Contacto</a>
+      </nav>
+    </div>
+
+    <div class="rail-bottom">
+      <div class="langs">
+        <span>Español — <b data-i18n="lang_native">Nativo</b></span>
+        <span>English — <b data-i18n="lang_prof_en">Fluido</b></span>
+        <span>Français — <b data-i18n="lang_prof_fr">Fluido</b></span>
+      </div>
+      <button class="print-btn" onclick="window.print()" data-i18n="print_btn">Guardar como PDF</button>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <section id="perfil" class="hero">
+      <h1>Francisco Alcalá</h1>
+      <div class="hero-role">Digital Product Owner &amp; Senior Insights Analyst</div>
+      <p class="hero-profile" data-i18n="hero_profile">
+        Más de diez años convirtiendo datos complejos y multi-fuente en decisiones claras para líderes de negocio.
+        Sólida base en SQL y BI (Power BI, Tableau, SAP BO, Snowflake, Python), con experiencia real
+        presentando recomendaciones basadas en datos a dirección y liderando decisiones en organizaciones
+        globales. Certified ScrumMaster® y SAFe® Product Owner, con fluidez profesional en español, inglés y francés.
+      </p>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div class="kpi-num" data-count="10" data-suffix="+">10+</div>
+          <div class="kpi-label" data-i18n="kpi1">años convirtiendo datos en decisiones</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-num" data-count="15000" data-suffix="+">15,000+</div>
+          <div class="kpi-label" data-i18n="kpi2">usuarios de manufactura servidos por CI Loop</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-num" data-count="8" data-suffix="+">8+</div>
+          <div class="kpi-label" data-i18n="kpi3">plataformas alineadas en 4 departamentos globales</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-num" data-count="3">3</div>
+          <div class="kpi-label" data-i18n="kpi4">idiomas de trabajo profesional</div>
+        </div>
+      </div>
+
+      <div class="insight-grid">
+        <div class="insight-card">
+          <h3 data-i18n="insight1_title">Profundidad técnica + producto</h3>
+          <p data-i18n="insight1_body">Cómodo escribiendo SQL y diseñando ETL, y presentando esas mismas decisiones a dirección — habla el idioma de ingeniería y el de negocio en la misma reunión.</p>
+        </div>
+        <div class="insight-card">
+          <h3 data-i18n="insight2_title">IA aplicada, no solo certificada</h3>
+          <p data-i18n="insight2_body">Ha desplegado en producción un asistente de IA que analiza feedback real de usuarios para priorizar decisiones de producto — no solo tiene el certificado.</p>
+        </div>
+        <div class="insight-card">
+          <h3 data-i18n="insight3_title">Cobertura completa del dato</h3>
+          <p data-i18n="insight3_body">Ha trabajado cada eslabón de la cadena: warehouse y ETL, ingeniería de datos, BI y reporting, y estrategia de producto.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <div class="sec-head">
+        <h2 data-i18n="sec_experiencia">Experiencia</h2>
+        <span class="sec-count"><span id="job-count">6</span> <span data-i18n="job_count_label">puestos</span></span>
+      </div>
+
+      <div class="filters">
+        <span class="chip active" data-filter="all" data-i18n="filter_all">Todo</span>
+        <span class="chip" data-filter="product" data-i18n="filter_product">Producto &amp; IA</span>
+        <span class="chip" data-filter="data" data-i18n="filter_data">Ingeniería de datos</span>
+        <span class="chip" data-filter="bi" data-i18n="filter_bi">BI &amp; Reporting</span>
+      </div>
+
+      <div id="job-list">
+
+        <article class="job" data-tags="product,ai">
+          <div class="job-when mono">2025<span class="dates" data-i18n="job1_present">— Presente</span></div>
+          <div>
+            <div class="job-title">Solution Delivery Manager | Digital Product Owner</div>
+            <div class="job-org" data-i18n="j1org">Pfizer — Dublín, Irlanda</div>
+            <div class="job-tags">
+              <span class="tag" data-i18n="tag_product">Producto</span>
+              <span class="tag" data-i18n="tag_ai">IA agéntica</span>
+            </div>
+            <ul class="job-bullets">
+              <li data-i18n="j1b1">Propietario de la estrategia y roadmap de CI Loop, una plataforma global de analítica de mejora continua usada por más de 15.000 usuarios de manufactura, traduciendo preguntas de negocio en requisitos de datos y decisiones de producto.</li>
+              <li data-i18n="j1b2">Diseñó y desplegó un asistente con IA que analiza grandes volúmenes de feedback de usuarios para identificar insights y priorizar el backlog con evidencia real.</li>
+              <li data-i18n="j1b3">Presenta de forma regular recomendaciones basadas en datos a dirección y liderazgo cross-funcional en Manufacturing, Digital, Analytics y Excelencia Operacional.</li>
+              <li data-i18n="j1b4">Lidera la evaluación de oportunidades de IA agéntica y automatización para mejorar la eficiencia analítica y la velocidad de entrega de insights.</li>
+              <li data-i18n="j1b5">Define estándares de gobernanza (IMEx) para medir de forma comparable las iniciativas de mejora en toda la red global.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job" data-tags="data">
+          <div class="job-when mono">2023<span class="dates" data-i18n="dash_2024">— 2024</span></div>
+          <div>
+            <div class="job-title">Data Engineer, Manager</div>
+            <div class="job-org" data-i18n="j2org">Pfizer — Dublín, Irlanda</div>
+            <div class="job-tags"><span class="tag" data-i18n="tag_dataeng">Data Engineering</span></div>
+            <ul class="job-bullets">
+              <li data-i18n="j2b1">Diseñó y entregó el Shipping Dashboard, definiendo la arquitectura de datos y el enfoque analítico para mejorar la visibilidad de envíos a nivel global.</li>
+              <li data-i18n="j2b2">Contribuyó a Batch Tracker y COVID Dashboard, desarrollando modelos de datos en SQL que mejoraron la trazabilidad y visibilidad ejecutiva del rendimiento de manufactura.</li>
+              <li data-i18n="j2b3">Utilizó Python, SQL, Neo4j, Snowflake y Apache Airflow para construir soluciones analíticas escalables.</li>
+              <li data-i18n="j2b4">Lideró la migración de cargas ETL de Amazon Redshift a Snowflake, modernizando la infraestructura de datos.</li>
+              <li data-i18n="j2b5">Trabajó junto a Product Owners para traducir preguntas de negocio ambiguas en análisis estructurados entregados vía Power BI.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job" data-tags="bi">
+          <div class="job-when mono">2020<span class="dates" data-i18n="dash_2022">— 2022</span></div>
+          <div>
+            <div class="job-title">Business Data Analyst | Operations Performance</div>
+            <div class="job-org" data-i18n="j3org">CNP Santander Insurance — Dublín, Irlanda</div>
+            <div class="job-tags"><span class="tag" data-i18n="tag_bi">BI &amp; Reporting</span></div>
+            <ul class="job-bullets">
+              <li data-i18n="j3b1">Entregó insights y reporting en Power BI directamente a la dirección financiera, orientando decisiones operativas y estratégicas.</li>
+              <li data-i18n="j3b2">Lideró proyectos cross-funcionales de operaciones, gestionando stakeholders financieros e IT durante migraciones de datos.</li>
+              <li data-i18n="j3b3">Responsable del ciclo de vida y calidad de datos, construyendo soluciones ETL/reporting con R, Oracle, PeopleSoft y SAP Business Objects.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job" data-tags="data,bi">
+          <div class="job-when mono">2018<span class="dates" data-i18n="dash_2020">— 2020</span></div>
+          <div>
+            <div class="job-title">Technology Liaison II, Financial Data Management</div>
+            <div class="job-org" data-i18n="j4org">MetLife — Dublín, Irlanda</div>
+            <div class="job-tags">
+              <span class="tag" data-i18n="tag_data_short">Data</span>
+              <span class="tag" data-i18n="tag_bi_short">BI</span>
+            </div>
+            <ul class="job-bullets">
+              <li data-i18n="j4b1">Dio soporte a la gestión y análisis de datos en más de 100 cubos OLAP en EMEA, Asia y América, atendiendo consultas y desarrollo de informes a medida.</li>
+              <li data-i18n="j4b2">Lideró un proyecto ágil para automatizar el reporting fiscal, gestionando diseño, desarrollo y documentación de principio a fin.</li>
+              <li data-i18n="j4b3">Aseguró la precisión y puntualidad del reporting financiero en moneda constante sobre Essbase.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job" data-tags="soporte">
+          <div class="job-when mono">2017<span class="dates" data-i18n="dash_2018">— 2018</span></div>
+          <div>
+            <div class="job-title">French Technical Support Analyst</div>
+            <div class="job-org" data-i18n="j5org">Interaction (cliente: PrintFleet) — Dublín, Irlanda / Canadá</div>
+            <div class="job-tags"><span class="tag" data-i18n="tag_support">Soporte multilingüe</span></div>
+            <ul class="job-bullets">
+              <li data-i18n="j5b1">Soporte técnico y gestión de relación con clientes en inglés, francés y español, resolviendo incidencias complejas bajo presión de tiempo.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job" data-tags="bi,data">
+          <div class="job-when mono">2013<span class="dates" data-i18n="dash_2017">— 2017</span></div>
+          <div>
+            <div class="job-title">BI Consultant</div>
+            <div class="job-org" data-i18n="j6org">Sopra Steria (cliente: Société Générale) — Madrid, España / Francia</div>
+            <div class="job-tags">
+              <span class="tag" data-i18n="tag_bi_short">BI</span>
+              <span class="tag" data-i18n="tag_etl">ETL</span>
+            </div>
+            <ul class="job-bullets">
+              <li data-i18n="j6b1">Gestionó y mantuvo un data warehouse en producción para una gran entidad financiera francesa, garantizando datos fiables para el reporting corporativo.</li>
+              <li data-i18n="j6b2">Construyó procesos ETL con Informatica PowerCenter, Bash y SQL, gestionando la automatización con Control-M.</li>
+              <li data-i18n="j6b3">Desarrolló dashboards en SAP Business Objects para apoyar la toma de decisiones de negocio.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <div class="sec-head">
+        <h2 data-i18n="sec_habilidades">Habilidades</h2>
+      </div>
+
+      <div class="skill-grid">
+        <div class="skill-panel">
+          <h3 data-i18n="skill_h1">IA &amp; Agéntica</h3>
+          <ul>
+            <li>Microsoft Copilot, Claude</li>
+            <li data-i18n="skill1_2">Fundamentos de IA agéntica y LLM</li>
+            <li data-i18n="skill1_3">Prompt engineering</li>
+            <li data-i18n="skill1_4">Flujos analíticos asistidos por IA</li>
+          </ul>
+        </div>
+        <div class="skill-panel">
+          <h3 data-i18n="skill_h2">Producto &amp; Ágil</h3>
+          <ul>
+            <li>SAFe®, Scrum, PI Planning</li>
+            <li data-i18n="skill2_2">Roadmap &amp; backlog</li>
+            <li data-i18n="skill2_3">Gestión de stakeholders</li>
+            <li data-i18n="skill2_4">Storytelling ejecutivo</li>
+            <li data-i18n="skill2_5">Lean Six Sigma White Belt, DMAIC, PDCA</li>
+          </ul>
+        </div>
+        <div class="skill-panel">
+          <h3 data-i18n="skill_h3">Datos &amp; Plataformas</h3>
+          <ul>
+            <li>Snowflake, Neo4j (Cypher)</li>
+            <li>Oracle, PostgreSQL</li>
+            <li>AWS (Redshift, S3), Teradata</li>
+            <li>Python, SQL, Apache Airflow</li>
+            <li>Power BI, Tableau, SAP BO</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="formacion">
+      <div class="sec-head">
+        <h2 data-i18n="sec_formacion">Formación &amp; certificaciones</h2>
+      </div>
+
+      <h3 class="subsection-title" data-i18n="sub_academic">Formación académica</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-when mono">2021 — 2022</div>
+          <div class="tl-title">MSc Data Analytics</div>
+          <div class="tl-org">CCT College Dublin</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-when mono">2006 — 2013</div>
+          <div class="tl-title">BSc Computer Science &amp; Engineering</div>
+          <div class="tl-org">Universidad Complutense de Madrid</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-when mono">2011 — 2012</div>
+          <div class="tl-title">Erasmus — Master d'Informatique</div>
+          <div class="tl-org">Sorbonne Université (Paris VI)</div>
+        </div>
+      </div>
+
+      <h3 class="subsection-title subsection-title-spaced" data-i18n="sub_certs">Certificaciones</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-when mono">2025</div>
+          <div class="tl-title">Neo4j Certified Professional</div>
+          <div class="tl-org">Neo4j</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-when mono">2024</div>
+          <div class="tl-title">Certified Generative AI Fundamentals</div>
+          <div class="tl-org">Udacity</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-when mono">2023</div>
+          <div class="tl-title">SAFe® 6 Product Owner / PM</div>
+          <div class="tl-org">Scaled Agile Inc.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-when mono">2020</div>
+          <div class="tl-title">Certified ScrumMaster® (CSM®)</div>
+          <div class="tl-org">Scrum Alliance</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="adicional">
+      <div class="sec-head">
+        <h2 data-i18n="sec_adicional">Información adicional</h2>
+      </div>
+      <ul class="job-bullets">
+        <li data-i18n="info_body1">Silvia del Pino Award 2013 — reconocimiento otorgado por compañeros de ingeniería (Universidad Complutense de Madrid) por espíritu de compañerismo.</li>
+        <li data-i18n="info_body2">2025: Padel Coach Certificate, Padel Federation of Ireland (Level 1 National Coaching Course).</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <div class="sec-head">
+        <h2 data-i18n="sec_contacto">Contacto</h2>
+      </div>
+
+      <div class="contact-panel">
+        <div>
+          <h2 data-i18n="contact_title">¿Hablamos?</h2>
+          <p data-i18n="contact_blurb">Disponible para roles de Product Owner, Insights Analyst o posiciones que combinen datos, producto e IA aplicada.</p>
+        </div>
+        <div class="contact-links">
+          <div class="contact-row">
+            <a href="mailto:fco.alcala.tomas@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="M3 6.5l9 6.2 9-6.2"></path></svg>
+              fco.alcala.tomas@gmail.com
+            </a>
+            <button class="copy-btn" type="button" data-copy="fco.alcala.tomas@gmail.com" aria-label="Copiar email" data-i18n-title="copy_btn_title">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1.5"></rect><path d="M5.5 15.5H4.8A1.3 1.3 0 0 1 3.5 14.2V4.8A1.3 1.3 0 0 1 4.8 3.5h9.4a1.3 1.3 0 0 1 1.3 1.3v.7"></path></svg>
+            </button>
+          </div>
+          <a href="tel:+353892469152" aria-label="Teléfono">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 4h4l1.6 4.8-2.3 1.7a12 12 0 0 0 6.2 6.2l1.7-2.3 4.8 1.6v4a1.5 1.5 0 0 1-1.6 1.5A17 17 0 0 1 3 6.1 1.5 1.5 0 0 1 4.5 4z"></path></svg>
+            +353 (0) 89 246 9152
+          </a>
+          <a href="https://www.linkedin.com/in/fco-alcala-tomas/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="7.5" y1="10" x2="7.5" y2="17"></line><circle cx="7.5" cy="6.8" r="0.6" fill="var(--gold)"></circle><path d="M11.5 17v-4a2.3 2.3 0 0 1 4.6 0v4"></path><line x1="11.5" y1="10" x2="11.5" y2="17"></line></svg>
+            linkedin.com/in/fco-alcala-tomas
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  var translations = {
+    en: {
+      nav_perfil: "Profile",
+      nav_experiencia: "Experience",
+      nav_habilidades: "Skills",
+      nav_formacion: "Education",
+      nav_adicional: "Additional info",
+      nav_contacto: "Contact",
+      lang_native: "Native",
+      lang_prof_en: "Fluent",
+      lang_prof_fr: "Fluent",
+      print_btn: "Save as PDF",
+      hero_profile: "More than ten years turning complex, multi-source data into clear decisions for business leaders. Strong SQL and BI background (Power BI, Tableau, SAP BO, Snowflake, Python), with real experience presenting data-driven recommendations to leadership and driving decisions across global organisations. Certified ScrumMaster® and SAFe® Product Owner, with professional fluency in Spanish, English and French.",
+      kpi1: "years turning data into decisions",
+      kpi2: "manufacturing users served by CI Loop",
+      kpi3: "platforms aligned across 4 global departments",
+      kpi4: "professional working languages",
+      insight1_title: "Technical depth meets product",
+      insight1_body: "Comfortable writing SQL and designing ETL, and presenting those same decisions to leadership — speaks the language of engineering and the language of business in the same meeting.",
+      insight2_title: "AI applied, not just certified",
+      insight2_body: "Has deployed an AI-powered assistant in production that analyses real user feedback to drive product decisions — not just holding the certificate.",
+      insight3_title: "End-to-end data ownership",
+      insight3_body: "Has worked every link of the chain: warehouse and ETL, data engineering, BI and reporting, and product strategy.",
+      sec_experiencia: "Experience",
+      job_count_label: "roles",
+      filter_all: "All",
+      filter_product: "Product & AI",
+      filter_data: "Data Engineering",
+      filter_bi: "BI & Reporting",
+      job1_present: "— Present",
+      dash_2024: "— 2024",
+      dash_2022: "— 2022",
+      dash_2020: "— 2020",
+      dash_2018: "— 2018",
+      dash_2017: "— 2017",
+      tag_product: "Product",
+      tag_ai: "Agentic AI",
+      tag_dataeng: "Data Engineering",
+      tag_bi: "BI & Reporting",
+      tag_data_short: "Data",
+      tag_bi_short: "BI",
+      tag_support: "Multilingual support",
+      tag_etl: "ETL",
+      j1b1: "Own the strategy and roadmap for CI Loop, a global continuous-improvement analytics platform used by 15,000+ manufacturing users, translating business questions into data requirements and product decisions.",
+      j1b2: "Built and deployed an AI-powered assistant that analyses large volumes of user feedback to surface insights and support evidence-based backlog prioritisation.",
+      j1b3: "Regularly present data-driven recommendations to senior stakeholders and cross-functional leadership across Manufacturing, Digital, Analytics and Operational Excellence.",
+      j1b4: "Lead evaluation of agentic AI and automation opportunities to improve analytics efficiency and the speed of insight delivery.",
+      j1b5: "Defined IMEx governance standards enabling consistent measurement of improvement initiatives across a global network.",
+      j2b1: "Designed and delivered the Shipping Dashboard, defining the data architecture and analytics approach used to improve global shipment visibility.",
+      j2b2: "Contributed to Batch Tracker and COVID Dashboard, developing SQL-based data models that improved traceability and executive visibility into manufacturing performance.",
+      j2b3: "Used Python, SQL, Neo4j, Snowflake and Apache Airflow to build and maintain scalable analytics solutions.",
+      j2b4: "Led the migration of ETL workloads from Amazon Redshift to Snowflake, modernising the underlying data infrastructure.",
+      j2b5: "Partnered with Product Owners to translate ambiguous business questions into structured analyses delivered via Power BI.",
+      j3b1: "Delivered data-driven insights and Power BI reporting directly to financial department leadership, informing operational and strategic decisions.",
+      j3b2: "Led cross-functional operations projects, managing financial and IT stakeholders through data migrations.",
+      j3b3: "Owned the data lifecycle and quality checks, building ETL/reporting solutions with R, Oracle, PeopleSoft and SAP Business Objects.",
+      j4b1: "Supported data management and analysis across 100+ OLAP cubes spanning EMEA, Asia and the Americas, handling stakeholder queries and custom reporting.",
+      j4b2: "Led an agile project to automate tax reporting, managing solution design, development and documentation end-to-end.",
+      j4b3: "Ensured data accuracy and timeliness for constant-currency financial reporting in Essbase.",
+      j1org: "Pfizer — Dublin, Ireland",
+      j2org: "Pfizer — Dublin, Ireland",
+      j3org: "CNP Santander Insurance — Dublin, Ireland",
+      j4org: "MetLife — Dublin, Ireland",
+      j5org: "Interaction (client: PrintFleet) — Dublin, Ireland / Canada",
+      j5b1: "Provided technical support and relationship management to clients in English, French and Spanish, resolving complex issues under time pressure.",
+      j6org: "Sopra Steria (client: Société Générale) — Madrid, Spain / France",
+      j6b1: "Managed and maintained a production data warehouse for a major French financial organisation, ensuring reliable data for enterprise reporting.",
+      j6b2: "Built ETL processes using Informatica PowerCenter, Bash and SQL, managing automation and prioritisation via Control-M.",
+      j6b3: "Developed dashboards using SAP Business Objects to support business decision-making.",
+      sec_habilidades: "Skills",
+      skill_h1: "AI &amp; Agentic",
+      skill1_2: "Agentic AI &amp; LLM fundamentals",
+      skill1_3: "Prompt engineering",
+      skill1_4: "AI-assisted analytics workflows",
+      skill_h2: "Product &amp; Agile",
+      skill2_2: "Roadmap &amp; backlog",
+      skill2_3: "Stakeholder management",
+      skill2_4: "Executive storytelling",
+      skill2_5: "Lean Six Sigma White Belt, DMAIC, PDCA",
+      skill_h3: "Data &amp; Platforms",
+      sec_formacion: "Education &amp; certifications",
+      sub_academic: "Academic education",
+      sub_certs: "Certifications",
+      sec_adicional: "Additional information",
+      info_body1: "Silvia del Pino Award 2013 — awarded by fellow engineering students (Universidad Complutense de Madrid) recognising spirit of fellowship.",
+      info_body2: "2025: Padel Coach Certificate, Padel Federation of Ireland (Level 1 National Coaching Course).",
+      sec_contacto: "Contact",
+      contact_title: "Let's talk",
+      contact_blurb: "Open to Product Owner, Insights Analyst, or roles combining data, product and applied AI.",
+      footnote: "Silvia del Pino Award 2013 — awarded by fellow engineering students (Universidad Complutense de Madrid) recognising spirit of fellowship. · 2025: Padel Coach Certificate, Padel Federation of Ireland (Level 1 National Coaching Course)."
+    },
+    fr: {
+      nav_perfil: "Profil",
+      nav_experiencia: "Expérience",
+      nav_habilidades: "Compétences",
+      nav_formacion: "Formation",
+      nav_adicional: "Informations complémentaires",
+      nav_contacto: "Contact",
+      lang_native: "Natif",
+      lang_prof_en: "Courant",
+      lang_prof_fr: "Courant",
+      print_btn: "Enregistrer en PDF",
+      hero_profile: "Plus de dix ans passés à transformer des données complexes et multi-sources en décisions claires pour des dirigeants. Solides bases en SQL et BI (Power BI, Tableau, SAP BO, Snowflake, Python), avec une réelle expérience de présentation de recommandations basées sur les données à la direction et de pilotage de décisions dans des organisations mondiales. Certified ScrumMaster® et SAFe® Product Owner, avec une maîtrise professionnelle de l'espagnol, de l'anglais et du français.",
+      kpi1: "ans à transformer la donnée en décisions",
+      kpi2: "utilisateurs de production servis par CI Loop",
+      kpi3: "plateformes alignées sur 4 départements mondiaux",
+      kpi4: "langues de travail professionnelles",
+      insight1_title: "Profondeur technique et produit",
+      insight1_body: "À l'aise pour écrire du SQL et concevoir des pipelines ETL, tout en présentant ces mêmes décisions à la direction — parle le langage de l'ingénierie et celui du business dans la même réunion.",
+      insight2_title: "IA appliquée, pas seulement certifiée",
+      insight2_body: "A déployé en production un assistant IA qui analyse de vrais retours utilisateurs pour orienter les décisions produit — pas seulement un certificat.",
+      insight3_title: "Maîtrise de bout en bout de la donnée",
+      insight3_body: "A travaillé sur chaque maillon de la chaîne : entrepôt de données et ETL, ingénierie des données, BI et reporting, et stratégie produit.",
+      sec_experiencia: "Expérience",
+      job_count_label: "postes",
+      filter_all: "Tout",
+      filter_product: "Produit & IA",
+      filter_data: "Ingénierie des données",
+      filter_bi: "BI & Reporting",
+      job1_present: "— Aujourd'hui",
+      dash_2024: "— 2024",
+      dash_2022: "— 2022",
+      dash_2020: "— 2020",
+      dash_2018: "— 2018",
+      dash_2017: "— 2017",
+      tag_product: "Produit",
+      tag_ai: "IA agentique",
+      tag_dataeng: "Ingénierie des données",
+      tag_bi: "BI & Reporting",
+      tag_data_short: "Data",
+      tag_bi_short: "BI",
+      tag_support: "Support multilingue",
+      tag_etl: "ETL",
+      j1b1: "Responsable de la stratégie et de la feuille de route de CI Loop, une plateforme mondiale d'analyse de l'amélioration continue utilisée par plus de 15 000 utilisateurs de production, traduisant les questions métier en besoins de données et décisions produit.",
+      j1b2: "Conçu et déployé un assistant IA qui analyse de gros volumes de retours utilisateurs pour faire émerger des insights et prioriser le backlog sur des bases factuelles.",
+      j1b3: "Présente régulièrement des recommandations basées sur les données à la direction et au leadership transverse (Manufacturing, Digital, Analytics, Excellence Opérationnelle).",
+      j1b4: "Pilote l'évaluation des opportunités d'IA agentique et d'automatisation pour améliorer l'efficacité analytique et la rapidité de livraison des insights.",
+      j1b5: "A défini des standards de gouvernance (IMEx) permettant une mesure comparable des initiatives d'amélioration à l'échelle du réseau mondial.",
+      j2b1: "Conçu et livré le Shipping Dashboard, en définissant l'architecture de données et l'approche analytique utilisées pour améliorer la visibilité des expéditions au niveau mondial.",
+      j2b2: "Contribué à Batch Tracker et COVID Dashboard, en développant des modèles de données SQL améliorant la traçabilité et la visibilité de la performance industrielle pour la direction.",
+      j2b3: "Utilisé Python, SQL, Neo4j, Snowflake et Apache Airflow pour construire des solutions analytiques évolutives.",
+      j2b4: "Piloté la migration des traitements ETL d'Amazon Redshift vers Snowflake, modernisant l'infrastructure de données.",
+      j2b5: "Collaboré avec les Product Owners pour traduire des questions métier ambiguës en analyses structurées livrées via Power BI.",
+      j3b1: "Livré des insights et du reporting Power BI directement à la direction financière, éclairant les décisions opérationnelles et stratégiques.",
+      j3b2: "Piloté des projets transverses aux opérations, en gérant des parties prenantes finance et IT lors de migrations de données.",
+      j3b3: "Responsable du cycle de vie et de la qualité des données, en construisant des solutions ETL/reporting avec R, Oracle, PeopleSoft et SAP Business Objects.",
+      j4b1: "Support à la gestion et à l'analyse des données sur plus de 100 cubes OLAP couvrant EMEA, Asie et Amériques, traitement des demandes et développement de rapports sur mesure.",
+      j4b2: "Piloté un projet agile d'automatisation du reporting fiscal, de la conception au développement et à la documentation.",
+      j4b3: "Garanti l'exactitude et la ponctualité du reporting financier à taux de change constant sous Essbase.",
+      j1org: "Pfizer — Dublin, Irlande",
+      j2org: "Pfizer — Dublin, Irlande",
+      j3org: "CNP Santander Insurance — Dublin, Irlande",
+      j4org: "MetLife — Dublin, Irlande",
+      j5org: "Interaction (client : PrintFleet) — Dublin, Irlande / Canada",
+      j5b1: "Support technique et gestion de la relation client en anglais, français et espagnol, résolution d'incidents complexes sous pression.",
+      j6org: "Sopra Steria (client : Société Générale) — Madrid, Espagne / France",
+      j6b1: "Gestion et maintien d'un entrepôt de données en production pour un grand groupe financier français, garantissant des données fiables pour le reporting d'entreprise.",
+      j6b2: "Construit des processus ETL avec Informatica PowerCenter, Bash et SQL, en gérant l'automatisation via Control-M.",
+      j6b3: "Développé des tableaux de bord SAP Business Objects pour appuyer la prise de décision.",
+      sec_habilidades: "Compétences",
+      skill_h1: "IA &amp; Agentique",
+      skill1_2: "Fondamentaux de l'IA agentique et des LLM",
+      skill1_3: "Prompt engineering",
+      skill1_4: "Flux analytiques assistés par IA",
+      skill_h2: "Produit &amp; Agile",
+      skill2_2: "Roadmap &amp; backlog",
+      skill2_3: "Gestion des parties prenantes",
+      skill2_4: "Storytelling exécutif",
+      skill2_5: "Lean Six Sigma White Belt, DMAIC, PDCA",
+      skill_h3: "Données &amp; Plateformes",
+      sec_formacion: "Formation &amp; certifications",
+      sub_academic: "Formation académique",
+      sub_certs: "Certifications",
+      sec_adicional: "Informations complémentaires",
+      info_body1: "Silvia del Pino Award 2013 — distinction décernée par des camarades ingénieurs (Universidad Complutense de Madrid) pour l'esprit de camaraderie.",
+      info_body2: "2025 : Padel Coach Certificate, Padel Federation of Ireland (Level 1 National Coaching Course).",
+      sec_contacto: "Contact",
+      contact_title: "Parlons-en",
+      contact_blurb: "Ouvert aux postes de Product Owner, Insights Analyst, ou à tout rôle combinant données, produit et IA appliquée.",
+      footnote: "Silvia del Pino Award 2013 — distinction décernée par des camarades ingénieurs (Universidad Complutense de Madrid) pour l'esprit de camaraderie. · 2025 : Padel Coach Certificate, Padel Federation of Ireland (Level 1 National Coaching Course)."
+    }
+  };
+
+  // store originals (Spanish, the authored markup) so we can switch back
+  var originals = {};
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    originals[el.getAttribute('data-i18n')] = el.innerHTML;
+  });
+
+  function setLanguage(lang){
+    document.documentElement.setAttribute('lang', lang);
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if(lang === 'es'){
+        el.innerHTML = originals[key];
+      } else if(translations[lang] && translations[lang][key]){
+        el.innerHTML = translations[lang][key];
+      }
+    });
+    document.querySelectorAll('.lang-switch button').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+  }
+
+  document.querySelectorAll('.lang-switch button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      setLanguage(btn.getAttribute('data-lang'));
+    });
+  });
+
+  try{ setLanguage('en'); }catch(e){ /* keep default markup if this fails */ }
+
+  // KPI count-up, once, on load. Falls back to the static value already in the
+  // markup if animation isn't supported for any reason, so KPIs never show 0.
+  document.querySelectorAll('.kpi-num').forEach(function(el){
+    try{
+      var target = parseInt(el.getAttribute('data-count'), 10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      if(isNaN(target)) return;
+      el.textContent = target.toLocaleString('en-US') + suffix;
+      if(typeof requestAnimationFrame !== 'function') return;
+
+      var duration = 900;
+      var start = null;
+
+      function step(ts){
+        if(!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var value = Math.floor(eased * target);
+        el.textContent = value.toLocaleString('en-US') + suffix;
+        if(progress < 1) requestAnimationFrame(step);
+        else el.textContent = target.toLocaleString('en-US') + suffix;
+      }
+      requestAnimationFrame(step);
+    }catch(e){ /* leave the static value in place */ }
+  });
+
+  // Copy email button
+  try{
+    var copyBtn = document.querySelector('.copy-btn');
+    if(copyBtn){
+      copyBtn.addEventListener('click', function(){
+        var text = copyBtn.getAttribute('data-copy');
+        var done = function(){
+          copyBtn.classList.add('copied');
+          setTimeout(function(){ copyBtn.classList.remove('copied'); }, 1500);
+        };
+        var legacyCopy = function(){
+          var ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          var ok = false;
+          try{ ok = document.execCommand('copy'); }catch(e){ ok = false; }
+          document.body.removeChild(ta);
+          if(ok) done();
+        };
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(text).then(done).catch(legacyCopy);
+        } else {
+          legacyCopy();
+        }
+      });
+    }
+  }catch(e){ /* clipboard not available, link still works */ }
+
+  // Experience filters
+  var chips = document.querySelectorAll('.chip');
+  var jobs = document.querySelectorAll('.job');
+  var jobCount = document.getElementById('job-count');
+
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      var filter = chip.getAttribute('data-filter');
+      var visible = 0;
+
+      jobs.forEach(function(job){
+        var tags = job.getAttribute('data-tags').split(',');
+        var show = filter === 'all' || tags.indexOf(filter) !== -1;
+        job.classList.toggle('hidden', !show);
+        if(show) visible++;
+      });
+      jobCount.textContent = visible;
+    });
+  });
+
+  // Active nav link on scroll
+  var sections = document.querySelectorAll('main section');
+  var navLinks = document.querySelectorAll('.rail-nav a');
+
+  navLinks.forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.querySelector(link.getAttribute('href'));
+      if(target){
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        navLinks.forEach(function(l){ l.classList.remove('active'); });
+        link.classList.add('active');
+      }
+    });
+  });
+
+  window.addEventListener('scroll', function(){
+    var pos = window.scrollY + 120;
+    sections.forEach(function(sec){
+      if(pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight){
+        navLinks.forEach(function(link){
+          link.classList.toggle('active', link.getAttribute('href') === '#' + sec.id);
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
