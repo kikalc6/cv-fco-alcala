@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Francisco Alcalá — Digital Product Owner &amp; Senior Insights Analyst</title>
 <meta name="description" content="Digital Product Owner &amp; Senior Insights Analyst. 10+ years turning complex data into product and business decisions, at Pfizer, MetLife and CNP Santander.">
 <meta property="og:type" content="profile">
@@ -343,6 +343,188 @@
     border-radius: 50%;
   }
 
+  /* ---------- career timeline ---------- */
+
+  .career-timeline{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .ct-track{
+    display: flex;
+    gap: 4px;
+    position: relative;
+    min-width: 860px;
+  }
+
+  .ct-track::before{
+    content: "";
+    position: absolute;
+    left: 6px;
+    right: 6px;
+    top: 6px;
+    height: 1px;
+    background: var(--line);
+  }
+
+  .ct-node{
+    flex: 1;
+    position: relative;
+    padding: 24px 10px 0 0;
+    min-width: 130px;
+    cursor: pointer;
+    border-radius: var(--radius);
+    transition: background .15s ease;
+  }
+
+  .ct-node:hover{ background: var(--panel-2); }
+  .ct-node:hover .ct-role{ color: var(--gold); }
+  .ct-node:focus-visible{ outline: 1px solid var(--gold); background: var(--panel-2); }
+
+  .job.job-flash{ animation: job-flash 1.1s ease; }
+  @keyframes job-flash{
+    0%{ background: var(--gold-soft); }
+    100%{ background: transparent; }
+  }
+
+  .ct-dot{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--ink);
+    border: 2px solid var(--line);
+  }
+
+  .ct-dot-current{
+    border-color: var(--gold);
+    background: var(--gold);
+  }
+
+  .ct-year{ font-size: 11.5px; color: var(--muted); margin-bottom: 6px; }
+  .ct-role{ font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.35; }
+  .ct-org{ font-size: 12px; color: var(--muted); margin-top: 2px; margin-bottom: 8px; }
+
+  .ct-stat{
+    font-size: 12px;
+    color: #CBD5E1;
+    line-height: 1.4;
+  }
+
+  .ct-stat-gold{
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .ct-stat-gold span{
+    font-family: 'Inter', sans-serif;
+    font-size: 11.5px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  @media (max-width: 760px){
+    .ct-track{
+      flex-direction: column;
+      min-width: 0;
+      gap: 22px;
+      padding-left: 20px;
+    }
+    .ct-track::before{
+      left: 6px;
+      top: 6px;
+      bottom: 6px;
+      right: auto;
+      width: 1px;
+      height: auto;
+    }
+    .ct-node{ padding: 0 0 0 20px; min-width: 0; }
+    .ct-dot{ top: 2px; left: -20px; }
+  }
+
+  /* ---------- featured case study ---------- */
+
+  .case-card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+  }
+
+  .case-head{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .case-head h3{ font-size: 19px; }
+
+  .case-subtitle{
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .case-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .case-stat{
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  .case-stat span{
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .case-body{
+    display: grid;
+    grid-template-columns: 0.85fr 1.3fr 0.85fr;
+    gap: 24px;
+  }
+
+  .case-label{
+    display: block;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .case-block p{
+    font-size: 13.5px;
+    color: #CBD5E1;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 480px){
+    .case-card{ padding: 22px; }
+    .case-body{ grid-template-columns: 1fr; gap: 18px; }
+  }
+
   /* ---------- skills ---------- */
 
   .skill-grid{
@@ -468,6 +650,13 @@
 
   .copy-btn.copied svg{ stroke: var(--gold); }
 
+  .updated-stamp{
+    margin-top: 16px;
+    font-size: 11.5px;
+    color: var(--muted);
+    text-align: right;
+  }
+
   .footnote{
     margin-top: 60px;
     font-size: 12.5px;
@@ -531,12 +720,59 @@
   }
 
   @media print{
+    /* Re-theme every CSS variable for print: dark navy panels become white/light,
+       low-contrast muted text becomes dark enough to read on paper, gold becomes
+       a darker gold that still has contrast on white. Because almost every
+       component is built from these variables (including inline SVG fills via
+       style="fill:var(--gold)"), this one block fixes contrast everywhere. */
+    :root{
+      --ink: #ffffff;
+      --panel: #ffffff;
+      --panel-2: #f4f4f4;
+      --line: #cccccc;
+      --text: #111111;
+      --muted: #444444;
+      --gold: #8a6d1f;
+      --gold-soft: #f2e9d2;
+    }
+
+    html, body{ background: white; color: #111; }
     .rail{ display: none; }
-    .shell{ grid-template-columns: 1fr; }
-    .main{ padding: 0 12px; max-width: 100%; }
-    body{ background: white; color: black; }
-    .kpi, .panel, .skill-panel, .contact-panel, .job{ background: white !important; }
-    .kpi-num, .hero-role, .sec-head, .job-title{ color: black !important; }
+    .shell{ grid-template-columns: 1fr; display: block; }
+    .main{ padding: 0; max-width: 100%; }
+
+    /* Prevent any wide grid/flex row from being cut off at the page edge:
+       force single column / wrap so nothing depends on horizontal space
+       print simply doesn't have. */
+    .kpi-row{ grid-template-columns: repeat(2, 1fr) !important; }
+    .insight-grid{ grid-template-columns: 1fr !important; }
+    .skill-grid{ grid-template-columns: 1fr !important; }
+    .case-body{ grid-template-columns: 1fr !important; gap: 14px !important; }
+    .career-timeline{ overflow: visible !important; }
+    .ct-track{
+      flex-direction: column !important;
+      min-width: 0 !important;
+      gap: 18px !important;
+      padding-left: 18px !important;
+    }
+    .ct-track::before{ left: 4px !important; top: 0 !important; bottom: 0 !important; right: auto !important; width: 1px !important; height: auto !important; }
+    .ct-node{ padding: 0 0 0 16px !important; min-width: 0 !important; }
+    .ct-dot{ top: 2px !important; left: -18px !important; }
+
+    /* Borders instead of color-only separation, since dark panel backgrounds
+       are gone now: keep hairlines visible as light gray. */
+    .kpi, .insight-card, .case-card, .skill-panel, .contact-panel{ border: 1px solid var(--line) !important; }
+
+    /* These were hardcoded to a light color meant for dark backgrounds,
+       bypassing the --text/--muted variables above: fix them directly. */
+    .job-bullets li, .ct-stat, .case-block p, .skill-panel li{ color: #333333 !important; }
+
+    /* Avoid awkward mid-card page breaks */
+    .kpi, .insight-card, .case-card, .job, .skill-panel, .tl-item, .ct-node{ break-inside: avoid; }
+    .sec-head{ break-after: avoid; }
+
+    /* Nothing interactive makes sense on paper */
+    .copy-btn, .chat-toggle, .chat-panel, .lang-switch, .print-btn{ display: none !important; }
   }
 </style>
 </head>
@@ -557,7 +793,9 @@
 
       <nav class="rail-nav">
         <a href="#perfil" class="active" data-i18n="nav_perfil">Perfil</a>
+        <a href="#trayectoria" data-i18n="nav_trayectoria">Trayectoria</a>
         <a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a>
+        <a href="#caso" data-i18n="nav_caso">Caso de éxito</a>
         <a href="#habilidades" data-i18n="nav_habilidades">Habilidades</a>
         <a href="#formacion" data-i18n="nav_formacion">Formación</a>
         <a href="#adicional" data-i18n="nav_adicional">Información adicional</a>
@@ -622,6 +860,59 @@
       </div>
     </section>
 
+    <section id="trayectoria">
+      <div class="sec-head">
+        <h2 data-i18n="sec_trayectoria">Trayectoria</h2>
+      </div>
+
+      <div class="career-timeline">
+        <div class="ct-track">
+          <div class="ct-node" data-job-target="job6" tabindex="0" role="button">
+            <div class="ct-dot"></div>
+            <div class="ct-year mono">2013–17</div>
+            <div class="ct-role">BI Consultant</div>
+            <div class="ct-org">Sopra Steria</div>
+            <div class="ct-stat" data-i18n="ct_stat1">Data warehouse en producción</div>
+          </div>
+          <div class="ct-node" data-job-target="job5" tabindex="0" role="button">
+            <div class="ct-dot"></div>
+            <div class="ct-year mono">2017–18</div>
+            <div class="ct-role" data-i18n="ct_role2">Soporte Técnico</div>
+            <div class="ct-org">Interaction</div>
+            <div class="ct-stat" data-i18n="ct_stat2">Soporte en 3 idiomas</div>
+          </div>
+          <div class="ct-node" data-job-target="job4" tabindex="0" role="button">
+            <div class="ct-dot"></div>
+            <div class="ct-year mono">2018–20</div>
+            <div class="ct-role">Technology Liaison II</div>
+            <div class="ct-org">MetLife</div>
+            <div class="ct-stat" data-i18n="ct_stat3">100+ cubos OLAP</div>
+          </div>
+          <div class="ct-node" data-job-target="job3" tabindex="0" role="button">
+            <div class="ct-dot"></div>
+            <div class="ct-year mono">2020–22</div>
+            <div class="ct-role">Business Data Analyst</div>
+            <div class="ct-org">CNP Santander</div>
+            <div class="ct-stat" data-i18n="ct_stat4">Reporting a dirección financiera</div>
+          </div>
+          <div class="ct-node" data-job-target="job2" tabindex="0" role="button">
+            <div class="ct-dot"></div>
+            <div class="ct-year mono">2023–24</div>
+            <div class="ct-role">Data Engineer, Manager</div>
+            <div class="ct-org">Pfizer</div>
+            <div class="ct-stat ct-stat-gold">416 <span data-i18n="ct_stat5_suffix">h/año ahorradas</span></div>
+          </div>
+          <div class="ct-node" data-job-target="job1" tabindex="0" role="button">
+            <div class="ct-dot ct-dot-current"></div>
+            <div class="ct-year mono" data-i18n="ct_present">2025–Presente</div>
+            <div class="ct-role">Digital Product Owner</div>
+            <div class="ct-org">Pfizer</div>
+            <div class="ct-stat ct-stat-gold">15.000+ <span data-i18n="ct_stat6_suffix">usuarios</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="experiencia">
       <div class="sec-head">
         <h2 data-i18n="sec_experiencia">Experiencia</h2>
@@ -637,7 +928,7 @@
 
       <div id="job-list">
 
-        <article class="job" data-tags="product,ai">
+        <article class="job" id="job1" data-tags="product,ai">
           <div class="job-when mono">2025<span class="dates" data-i18n="job1_present">— Presente</span></div>
           <div>
             <div class="job-title">Solution Delivery Manager | Digital Product Owner</div>
@@ -656,15 +947,15 @@
           </div>
         </article>
 
-        <article class="job" data-tags="data">
+        <article class="job" id="job2" data-tags="data">
           <div class="job-when mono">2023<span class="dates" data-i18n="dash_2024">— 2024</span></div>
           <div>
             <div class="job-title">Data Engineer, Manager</div>
             <div class="job-org" data-i18n="j2org">Pfizer — Dublín, Irlanda</div>
             <div class="job-tags"><span class="tag" data-i18n="tag_dataeng">Data Engineering</span></div>
             <ul class="job-bullets">
-              <li data-i18n="j2b1">Diseño y entrega del Shipping Dashboard, con definición de la arquitectura de datos y el enfoque analítico para mejorar la visibilidad de envíos a nivel global.</li>
-              <li data-i18n="j2b2">Contribución a Batch Tracker y COVID Dashboard, con desarrollo de modelos de datos en SQL que mejoraron la trazabilidad y visibilidad ejecutiva del rendimiento de manufactura.</li>
+              <li data-i18n="j2b1">Liderazgo técnico de Shipping Dashboard, una iniciativa de digitalización de la cadena de suministro que sustituyó la planificación de envíos basada en hojas de cálculo, mejorando la visibilidad entre sedes y generando un ahorro estimado de 416 horas anuales.</li>
+              <li data-i18n="j2b2">Desarrollo de modelos de datos en SQL y reporting en varios paneles de rendimiento de manufactura, mejorando la trazabilidad y la visibilidad ejecutiva para dirección.</li>
               <li data-i18n="j2b3">Uso de Python, SQL, Neo4j, Snowflake y Apache Airflow para construir soluciones analíticas escalables.</li>
               <li data-i18n="j2b4">Liderazgo en la migración de cargas ETL de Amazon Redshift a Snowflake, con modernización de la infraestructura de datos.</li>
               <li data-i18n="j2b5">Colaboración con Product Owners para traducir preguntas de negocio ambiguas en análisis estructurados entregados vía Power BI.</li>
@@ -672,7 +963,7 @@
           </div>
         </article>
 
-        <article class="job" data-tags="bi">
+        <article class="job" id="job3" data-tags="bi">
           <div class="job-when mono">2020<span class="dates" data-i18n="dash_2022">— 2022</span></div>
           <div>
             <div class="job-title">Business Data Analyst | Operations Performance</div>
@@ -686,7 +977,7 @@
           </div>
         </article>
 
-        <article class="job" data-tags="data,bi">
+        <article class="job" id="job4" data-tags="data,bi">
           <div class="job-when mono">2018<span class="dates" data-i18n="dash_2020">— 2020</span></div>
           <div>
             <div class="job-title">Technology Liaison II, Financial Data Management</div>
@@ -703,7 +994,7 @@
           </div>
         </article>
 
-        <article class="job" data-tags="soporte">
+        <article class="job" id="job5" data-tags="soporte">
           <div class="job-when mono">2017<span class="dates" data-i18n="dash_2018">— 2018</span></div>
           <div>
             <div class="job-title">French Technical Support Analyst</div>
@@ -715,7 +1006,7 @@
           </div>
         </article>
 
-        <article class="job" data-tags="bi,data">
+        <article class="job" id="job6" data-tags="bi,data">
           <div class="job-when mono">2013<span class="dates" data-i18n="dash_2017">— 2017</span></div>
           <div>
             <div class="job-title">BI Consultant</div>
@@ -732,6 +1023,43 @@
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <section id="caso">
+      <div class="sec-head">
+        <h2 data-i18n="sec_caso">Caso de éxito</h2>
+      </div>
+
+      <div class="case-card">
+        <div class="case-head">
+          <div>
+            <h3 data-i18n="case_title">Supply Chain Digitalization Program</h3>
+            <div class="case-subtitle" data-i18n="case_subtitle">Shipping Dashboard · Grange Castle</div>
+          </div>
+          <span class="case-stat">416<span data-i18n="case_stat_suffix"> h/año</span></span>
+        </div>
+        <div class="case-body">
+          <div class="case-block">
+            <span class="case-label" data-i18n="case_situation_label">Situación</span>
+            <p data-i18n="case_situation">La planificación de envíos en el centro de Grange Castle se gestionaba manualmente con hojas de cálculo Excel, limitando la visibilidad entre sedes y generando inconsistencias de datos.</p>
+          </div>
+          <div class="case-block">
+            <span class="case-label" data-i18n="case_action_label">Acción</span>
+            <p data-i18n="case_action">Liderazgo técnico de un equipo de 3 Data Engineers, coordinando workshops con expertos de negocio, diseño funcional, y colaboración directa con Product Owner y UX para sustituir la planificación en Excel por una solución de datos conectada.</p>
+            <div class="case-tags">
+              <span class="tag" data-i18n="case_tag1">Stakeholder management</span>
+              <span class="tag" data-i18n="case_tag2">Workshops con SMEs</span>
+              <span class="tag" data-i18n="case_tag3">Diseño funcional</span>
+              <span class="tag" data-i18n="case_tag4">Liderazgo de equipo (3 DEs)</span>
+              <span class="tag" data-i18n="case_tag5">Colaboración con PO/UX</span>
+            </div>
+          </div>
+          <div class="case-block">
+            <span class="case-label" data-i18n="case_result_label">Resultado</span>
+            <p data-i18n="case_result">Un ahorro estimado de 416 horas anuales, mejor visibilidad entre sedes, y feedback muy positivo del negocio, con alta adopción en Grange Castle y más allá.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -862,6 +1190,7 @@
           </a>
         </div>
       </div>
+      <div class="updated-stamp"><span data-i18n="updated_label">Actualizado</span> · <span id="updatedDate"></span></div>
     </section>
 
   </main>
@@ -872,7 +1201,34 @@
     en: {
       nav_perfil: "Profile",
       nav_experiencia: "Experience",
+      updated_label: "Updated",
+      nav_trayectoria: "Career path",
+      sec_trayectoria: "Career path",
+      ct_role2: "Technical Support",
+      ct_stat1: "Production data warehouse",
+      ct_stat2: "Support in 3 languages",
+      ct_stat3: "100+ OLAP cubes",
+      ct_stat4: "Reporting to financial leadership",
+      ct_stat5_suffix: "hrs/year saved",
+      ct_stat6_suffix: "users",
+      ct_present: "2025–Present",
+      nav_caso: "Featured case",
       nav_habilidades: "Skills",
+      sec_caso: "Featured case",
+      case_title: "Supply Chain Digitalization Program",
+      case_subtitle: "Shipping Dashboard · Grange Castle",
+      case_stat_suffix: " hrs/year",
+      case_situation_label: "Situation",
+      case_situation: "Shipment planning at the Grange Castle site still ran on manual Excel spreadsheets, limiting cross-site visibility and causing data inconsistencies.",
+      case_action_label: "Action",
+      case_action: "Led the technical delivery with a team of 3 Data Engineers, running workshops with business SMEs, owning functional design, and partnering directly with the Product Owner and UX to replace Excel-based planning with a connected data solution.",
+      case_tag1: "Stakeholder management",
+      case_tag2: "SME workshops",
+      case_tag3: "Functional design",
+      case_tag4: "Team leadership (3 DEs)",
+      case_tag5: "PO/UX collaboration",
+      case_result_label: "Result",
+      case_result: "An estimated 416 annual hours of operational savings, improved cross-site visibility, and strongly positive business feedback, with high adoption at Grange Castle and beyond.",
       nav_formacion: "Education",
       nav_adicional: "Additional info",
       nav_contacto: "Contact",
@@ -916,8 +1272,8 @@
       j1b3: "Regularly present data-driven recommendations to senior stakeholders and cross-functional leadership across Manufacturing, Digital, Analytics and Operational Excellence.",
       j1b4: "Lead evaluation of agentic AI and automation opportunities to improve analytics efficiency and the speed of insight delivery.",
       j1b5: "Defined IMEx governance standards enabling consistent measurement of improvement initiatives across a global network.",
-      j2b1: "Designed and delivered the Shipping Dashboard, defining the data architecture and analytics approach used to improve global shipment visibility.",
-      j2b2: "Contributed to Batch Tracker and COVID Dashboard, developing SQL-based data models that improved traceability and executive visibility into manufacturing performance.",
+      j2b1: "Led the technical delivery of Shipping Dashboard, a supply-chain digitalisation initiative that replaced spreadsheet-based shipment planning, improving cross-site visibility and generating an estimated 416 annual hours of operational savings.",
+      j2b2: "Built SQL-based data models and reporting across multiple manufacturing-performance dashboards, improving traceability and executive visibility for senior stakeholders.",
       j2b3: "Used Python, SQL, Neo4j, Snowflake and Apache Airflow to build and maintain scalable analytics solutions.",
       j2b4: "Led the migration of ETL workloads from Amazon Redshift to Snowflake, modernising the underlying data infrastructure.",
       j2b5: "Partnered with Product Owners to translate ambiguous business questions into structured analyses delivered via Power BI.",
@@ -957,12 +1313,39 @@
       sec_contacto: "Contact",
       contact_title: "Let's talk",
       contact_blurb: "Open to Product Owner, Insights Analyst, or roles combining data, product and applied AI.",
-      footnote: "Silvia del Pino Award 2013 — awarded by fellow engineering students (Universidad Complutense de Madrid) recognising spirit of fellowship. · 2025: Padel Coach Certificate, Padel Federation of Ireland (Level 1 National Coaching Course)."
+      footnote: "Silvia del Pino Award 2013 — awarded by fellow engineering students (Universidad Complutense de Madrid) recognising spirit of fellowship. · 2025: Padel Coach Certificate, Padel Federation of Ireland (Level 1 National Coaching Course).",
     },
     fr: {
       nav_perfil: "Profil",
       nav_experiencia: "Expérience",
+      updated_label: "Mis à jour",
+      nav_trayectoria: "Parcours",
+      sec_trayectoria: "Parcours professionnel",
+      ct_role2: "Support Technique",
+      ct_stat1: "Entrepôt de données en production",
+      ct_stat2: "Support en 3 langues",
+      ct_stat3: "100+ cubes OLAP",
+      ct_stat4: "Reporting à la direction financière",
+      ct_stat5_suffix: "h/an économisées",
+      ct_stat6_suffix: "utilisateurs",
+      ct_present: "2025–Aujourd'hui",
+      nav_caso: "Étude de cas",
       nav_habilidades: "Compétences",
+      sec_caso: "Étude de cas",
+      case_title: "Supply Chain Digitalization Program",
+      case_subtitle: "Shipping Dashboard · Grange Castle",
+      case_stat_suffix: " h/an",
+      case_situation_label: "Situation",
+      case_situation: "La planification des expéditions sur le site de Grange Castle reposait encore sur des tableurs Excel manuels, limitant la visibilité inter-sites et créant des incohérences de données.",
+      case_action_label: "Action",
+      case_action: "Pilotage technique avec une équipe de 3 Data Engineers, animation d'ateliers avec les experts métier, responsabilité de la conception fonctionnelle, et collaboration directe avec le Product Owner et l'UX pour remplacer la planification sur Excel par une solution de données connectée.",
+      case_tag1: "Gestion des parties prenantes",
+      case_tag2: "Ateliers SME",
+      case_tag3: "Conception fonctionnelle",
+      case_tag4: "Encadrement d'équipe (3 DE)",
+      case_tag5: "Collaboration PO/UX",
+      case_result_label: "Résultat",
+      case_result: "Une économie estimée de 416 heures par an, une meilleure visibilité inter-sites, et un retour très positif du métier, avec une forte adoption à Grange Castle et au-delà.",
       nav_formacion: "Formation",
       nav_adicional: "Informations complémentaires",
       nav_contacto: "Contact",
@@ -1006,8 +1389,8 @@
       j1b3: "Présentation régulière de recommandations basées sur les données à la direction et aux équipes d'encadrement transverses (Manufacturing, Digital, Analytics, Operational Excellence).",
       j1b4: "Pilotage de l'évaluation des opportunités d'IA agentique et d'automatisation pour accélérer la production d'insights et améliorer l'efficacité analytique.",
       j1b5: "Définition de standards de gouvernance (IMEx) permettant une mesure comparable des initiatives d'amélioration à l'échelle du réseau mondial.",
-      j2b1: "Conception et livraison du Shipping Dashboard, avec définition de l'architecture de données et de l'approche analytique utilisées pour améliorer la visibilité des expéditions au niveau mondial.",
-      j2b2: "Contribution à Batch Tracker et COVID Dashboard, avec développement de modèles de données SQL améliorant la traçabilité et la visibilité de la performance industrielle pour la direction.",
+      j2b1: "Pilotage technique de Shipping Dashboard, une initiative de digitalisation de la chaîne logistique ayant remplacé la planification des expéditions sur tableurs, améliorant la visibilité inter-sites et générant une économie estimée de 416 heures par an.",
+      j2b2: "Conception de modèles de données SQL et de rapports pour plusieurs tableaux de bord de performance industrielle, améliorant la traçabilité et la visibilité pour la direction.",
       j2b3: "Utilisation de Python, SQL, Neo4j, Snowflake et Apache Airflow pour construire des solutions analytiques évolutives.",
       j2b4: "Pilotage de la migration des traitements ETL d'Amazon Redshift vers Snowflake, avec modernisation de l'infrastructure de données.",
       j2b5: "Collaboration avec les Product Owners pour traduire des questions métier ambiguës en analyses structurées livrées via Power BI.",
@@ -1047,7 +1430,7 @@
       sec_contacto: "Contact",
       contact_title: "Parlons-en",
       contact_blurb: "Ouvert aux postes de Product Owner, Insights Analyst, ou à tout rôle combinant données, produit et IA appliquée.",
-      footnote: "Silvia del Pino Award 2013 — distinction décernée par des camarades ingénieurs (Universidad Complutense de Madrid) pour l'esprit de camaraderie. · 2025 : Padel Coach Certificate, Padel Federation of Ireland (Level 1 National Coaching Course)."
+      footnote: "Silvia del Pino Award 2013 — distinction décernée par des camarades ingénieurs (Universidad Complutense de Madrid) pour l'esprit de camaraderie. · 2025 : Padel Coach Certificate, Padel Federation of Ireland (Level 1 National Coaching Course).",
     }
   };
 
@@ -1056,7 +1439,6 @@
   document.querySelectorAll('[data-i18n]').forEach(function(el){
     originals[el.getAttribute('data-i18n')] = el.innerHTML;
   });
-
   function setLanguage(lang){
     document.documentElement.setAttribute('lang', lang);
     document.querySelectorAll('[data-i18n]').forEach(function(el){
@@ -1067,6 +1449,7 @@
         el.innerHTML = translations[lang][key];
       }
     });
+    window.__cvLang = lang;
     document.querySelectorAll('.lang-switch button').forEach(function(btn){
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
@@ -1105,6 +1488,23 @@
       requestAnimationFrame(step);
     }catch(e){ /* leave the static value in place */ }
   });
+
+
+  // Last-updated stamp (always current, localized)
+  try{
+    var localeMap = { es: 'es-ES', en: 'en-GB', fr: 'fr-FR' };
+    function renderUpdatedDate(){
+      var lang = window.__cvLang || 'en';
+      var el = document.getElementById('updatedDate');
+      if(!el) return;
+      var formatted = new Intl.DateTimeFormat(localeMap[lang] || 'en-GB', { month: 'long', year: 'numeric' }).format(new Date());
+      el.textContent = formatted.charAt(0).toUpperCase() + formatted.slice(1);
+    }
+    renderUpdatedDate();
+    document.querySelectorAll('.lang-switch button').forEach(function(btn){
+      btn.addEventListener('click', function(){ setTimeout(renderUpdatedDate, 0); });
+    });
+  }catch(e){ /* non-critical */ }
 
   // Copy email button
   try{
@@ -1159,6 +1559,30 @@
       jobCount.textContent = visible;
     });
   });
+
+  // Career timeline: click a stage to jump to that role in Experience
+  try{
+    document.querySelectorAll('.ct-node').forEach(function(node){
+      function goToJob(){
+        var targetId = node.getAttribute('data-job-target');
+        var job = document.getElementById(targetId);
+        if(!job) return;
+
+        // make sure it's visible regardless of the active experience filter
+        var allChip = document.querySelector('.chip[data-filter="all"]');
+        if(allChip && !allChip.classList.contains('active')) allChip.click();
+
+        job.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        job.classList.remove('job-flash');
+        void job.offsetWidth; // restart animation if clicked twice
+        job.classList.add('job-flash');
+      }
+      node.addEventListener('click', goToJob);
+      node.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); goToJob(); }
+      });
+    });
+  }catch(e){ /* non-critical */ }
 
   // Active nav link on scroll
   var sections = document.querySelectorAll('main section');
