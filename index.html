@@ -458,6 +458,33 @@
     padding: 28px 32px;
   }
 
+  .case-tabs{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+  }
+
+  .case-tab{
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    color: var(--muted);
+    background: transparent;
+    border: 1px solid var(--line);
+    padding: 8px 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+
+  .case-tab:hover{ color: var(--text); border-color: var(--gold); }
+
+  .case-tab.active{
+    color: var(--ink);
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
   .case-head{
     display: flex;
     align-items: baseline;
@@ -469,12 +496,9 @@
     border-bottom: 1px solid var(--line);
   }
 
-  .case-head h3{ font-size: 19px; }
-
   .case-subtitle{
-    font-size: 12.5px;
+    font-size: 13px;
     color: var(--muted);
-    margin-top: 4px;
   }
 
   .case-tags{
@@ -796,7 +820,7 @@
         <a href="#perfil" class="active" data-i18n="nav_perfil">Perfil</a>
         <a href="#trayectoria" data-i18n="nav_trayectoria">Trayectoria</a>
         <a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a>
-        <a href="#caso" data-i18n="nav_caso">Caso de éxito</a>
+        <a href="#caso" data-i18n="nav_caso">Casos de éxito</a>
         <a href="#habilidades" data-i18n="nav_habilidades">Habilidades</a>
         <a href="#formacion" data-i18n="nav_formacion">Formación</a>
         <a href="#adicional" data-i18n="nav_adicional">Información adicional</a>
@@ -944,6 +968,7 @@
               <li data-i18n="j1b3">Presentación regular de recomendaciones basadas en datos a dirección y a equipos de liderazgo multifuncionales en Manufacturing, Digital, Analytics y Operational Excellence.</li>
               <li data-i18n="j1b4">Liderazgo en la evaluación de oportunidades de IA agéntica y automatización para acelerar la generación de insights y mejorar la eficiencia analítica.</li>
               <li data-i18n="j1b5">Definición de estándares de gobernanza (IMEx) para medir de forma comparable las iniciativas de mejora en toda la red global.</li>
+              <li data-i18n="j1b6">Responsable end-to-end de Live Visual Stream Map (LVSM) en Ringaskiddy para la línea de producto Lorbrena: diseño funcional, solución técnica sobre Neo4j, y primeras demos ante stakeholders que aseguraron 640.000 € de presupuesto de implementación y sentaron la base de un ahorro estimado de 2,3M $ en inventario.</li>
             </ul>
           </div>
         </article>
@@ -1029,36 +1054,67 @@
 
     <section id="caso">
       <div class="sec-head">
-        <h2 data-i18n="sec_caso">Caso de éxito</h2>
+        <h2 data-i18n="sec_caso">Casos de éxito</h2>
       </div>
 
       <div class="case-card">
-        <div class="case-head">
-          <div>
-            <h3 data-i18n="case_title">Supply Chain Digitalization Program</h3>
-            <div class="case-subtitle" data-i18n="case_subtitle">Shipping Dashboard · Grange Castle</div>
-          </div>
-          <span class="case-stat">416<span data-i18n="case_stat_suffix"> h/año</span></span>
+        <div class="case-tabs">
+          <button class="case-tab active" data-case-tab="lvsm" data-i18n="case2_title">Live Visual Stream Map (LVSM)</button>
+          <button class="case-tab" data-case-tab="shipping" data-i18n="case_title">Shipping Dashboard</button>
         </div>
-        <div class="case-body">
-          <div class="case-block">
-            <span class="case-label" data-i18n="case_situation_label">Situación</span>
-            <p data-i18n="case_situation">La planificación de envíos en el centro de Grange Castle se gestionaba manualmente con hojas de cálculo Excel, limitando la visibilidad entre sedes y generando inconsistencias de datos.</p>
+
+        <div class="case-panel" data-case-panel="lvsm">
+          <div class="case-head">
+            <div class="case-subtitle" data-i18n="case2_subtitle">Línea de producto Lorbrena · Ringaskiddy</div>
+            <span class="case-stat">$2.3M<span data-i18n="case2_stat_suffix"> ahorro</span></span>
           </div>
-          <div class="case-block">
-            <span class="case-label" data-i18n="case_action_label">Acción</span>
-            <p data-i18n="case_action">Liderazgo técnico de un equipo de 3 Data Engineers, coordinando workshops con expertos de negocio, diseño funcional, y colaboración directa con Product Owner y UX para sustituir la planificación en Excel por una solución de datos conectada.</p>
-            <div class="case-tags">
-              <span class="tag" data-i18n="case_tag1">Stakeholder management</span>
-              <span class="tag" data-i18n="case_tag2">Workshops con SMEs</span>
-              <span class="tag" data-i18n="case_tag3">Diseño funcional</span>
-              <span class="tag" data-i18n="case_tag4">Liderazgo de equipo (3 DEs)</span>
-              <span class="tag" data-i18n="case_tag5">Colaboración con PO/UX</span>
+          <div class="case-body">
+            <div class="case-block">
+              <span class="case-label" data-i18n="case_situation_label">Situación</span>
+              <p data-i18n="case2_situation">No existía una solución de visualización de datos conectada capaz de respaldar, con evidencia sólida, la inversión necesaria para escalar el seguimiento de inventario de la línea Lorbrena.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-label" data-i18n="case_action_label">Acción</span>
+              <p data-i18n="case2_action">Diseño y desarrollo de la solución técnica basada en Neo4j para Live Visual Stream Map (LVSM), liderando las primeras demos ante stakeholders para validar el enfoque y conseguir la aprobación de presupuesto.</p>
+              <div class="case-tags">
+                <span class="tag" data-i18n="case2_tag1">Diseño de producto</span>
+                <span class="tag" data-i18n="case2_tag2">Neo4j / graph data</span>
+                <span class="tag" data-i18n="case2_tag3">Demos a stakeholders</span>
+                <span class="tag" data-i18n="case2_tag4">Business case</span>
+              </div>
+            </div>
+            <div class="case-block">
+              <span class="case-label" data-i18n="case_result_label">Resultado</span>
+              <p data-i18n="case2_result">Aprobación de 640.000 € de presupuesto de implementación, sentando la base de un ahorro estimado de 2,3M $ en inventario para la línea de producto Lorbrena.</p>
             </div>
           </div>
-          <div class="case-block">
-            <span class="case-label" data-i18n="case_result_label">Resultado</span>
-            <p data-i18n="case_result">Un ahorro estimado de 416 horas anuales, mejor visibilidad entre sedes, y feedback muy positivo del negocio, con alta adopción en Grange Castle y más allá.</p>
+        </div>
+
+        <div class="case-panel" data-case-panel="shipping" hidden>
+          <div class="case-head">
+            <div class="case-subtitle" data-i18n="case_subtitle">Supply Chain Digitalization Program · Grange Castle</div>
+            <span class="case-stat">416<span data-i18n="case_stat_suffix"> h/año</span></span>
+          </div>
+          <div class="case-body">
+            <div class="case-block">
+              <span class="case-label" data-i18n="case_situation_label">Situación</span>
+              <p data-i18n="case_situation">La planificación de envíos en el centro de Grange Castle se gestionaba manualmente con hojas de cálculo Excel, limitando la visibilidad entre sedes y generando inconsistencias de datos.</p>
+            </div>
+            <div class="case-block">
+              <span class="case-label" data-i18n="case_action_label">Acción</span>
+              <p data-i18n="case_action">Liderazgo técnico de un equipo de 3 Data Engineers, coordinando workshops con expertos de negocio, diseño funcional, y colaboración directa con Product Owner y UX para sustituir la planificación en Excel por una solución de datos conectada.</p>
+              <div class="case-tags">
+                <span class="tag" data-i18n="case_tag1">Stakeholder management</span>
+                <span class="tag" data-i18n="case_tag2">Workshops con SMEs</span>
+                <span class="tag" data-i18n="case_tag3">Diseño funcional</span>
+                <span class="tag" data-i18n="case_tag4">Liderazgo de equipo (3 DEs)</span>
+                <span class="tag" data-i18n="case_tag5">Colaboración con PO/UX</span>
+              </div>
+            </div>
+            <div class="case-block">
+              <span class="case-label" data-i18n="case_result_label">Resultado</span>
+              <p data-i18n="case_result">Un ahorro estimado de 416 horas anuales, mejor visibilidad entre sedes, y feedback muy positivo del negocio, con alta adopción en Grange Castle y más allá.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1213,11 +1269,11 @@
       ct_stat5_suffix: "hrs/year saved",
       ct_stat6_suffix: "users",
       ct_present: "2025–Present",
-      nav_caso: "Featured case",
+      nav_caso: "Featured cases",
       nav_habilidades: "Skills",
-      sec_caso: "Featured case",
-      case_title: "Supply Chain Digitalization Program",
-      case_subtitle: "Shipping Dashboard · Grange Castle",
+      sec_caso: "Featured cases",
+      case_title: "Shipping Dashboard",
+      case_subtitle: "Supply Chain Digitalization Program · Grange Castle",
       case_stat_suffix: " hrs/year",
       case_situation_label: "Situation",
       case_situation: "Shipment planning at the Grange Castle site still ran on manual Excel spreadsheets, limiting cross-site visibility and causing data inconsistencies.",
@@ -1230,6 +1286,16 @@
       case_tag5: "PO/UX collaboration",
       case_result_label: "Result",
       case_result: "An estimated 416 annual hours of operational savings, improved cross-site visibility, and strongly positive business feedback, with high adoption at Grange Castle and beyond.",
+      case2_title: "Live Visual Stream Map (LVSM)",
+      case2_subtitle: "Lorbrena product line · Ringaskiddy",
+      case2_stat_suffix: " savings",
+      case2_situation: "No connected data visualisation solution existed that could support, with solid evidence, the investment needed to scale inventory tracking for the Lorbrena product line.",
+      case2_action: "Designed and built the Neo4j-based technical solution for Live Visual Stream Map (LVSM), leading the first stakeholder demos to validate the approach and secure budget approval.",
+      case2_tag1: "Product design",
+      case2_tag2: "Neo4j / graph data",
+      case2_tag3: "Stakeholder demos",
+      case2_tag4: "Business case",
+      case2_result: "Secured €640k in implementation budget, laying the foundation for an estimated $2.3M in inventory savings for the Lorbrena product line.",
       nav_formacion: "Education",
       nav_adicional: "Additional info",
       nav_contacto: "Contact",
@@ -1273,6 +1339,7 @@
       j1b3: "Regularly present data-driven recommendations to senior stakeholders and cross-functional leadership across Manufacturing, Digital, Analytics and Operational Excellence.",
       j1b4: "Lead evaluation of agentic AI and automation opportunities to improve analytics efficiency and the speed of insight delivery.",
       j1b5: "Defined IMEx governance standards enabling consistent measurement of improvement initiatives across a global network.",
+      j1b6: "Owned Live Visual Stream Map (LVSM) end-to-end at Ringaskiddy for the Lorbrena product line: functional design, the Neo4j-based technical solution, and the first stakeholder demos that secured €640k in implementation budget and laid the foundation for an estimated $2.3M in inventory savings.",
       j2b1: "Led the technical delivery of Shipping Dashboard, a supply-chain digitalisation initiative that replaced spreadsheet-based shipment planning, improving cross-site visibility and generating an estimated 416 annual hours of operational savings.",
       j2b2: "Built SQL-based data models and reporting across multiple manufacturing-performance dashboards, improving traceability and executive visibility for senior stakeholders.",
       j2b3: "Used Python, SQL, Neo4j, Snowflake and Apache Airflow to build and maintain scalable analytics solutions.",
@@ -1330,11 +1397,11 @@
       ct_stat5_suffix: "h/an économisées",
       ct_stat6_suffix: "utilisateurs",
       ct_present: "2025–Aujourd'hui",
-      nav_caso: "Étude de cas",
+      nav_caso: "Études de cas",
       nav_habilidades: "Compétences",
-      sec_caso: "Étude de cas",
-      case_title: "Supply Chain Digitalization Program",
-      case_subtitle: "Shipping Dashboard · Grange Castle",
+      sec_caso: "Études de cas",
+      case_title: "Shipping Dashboard",
+      case_subtitle: "Supply Chain Digitalization Program · Grange Castle",
       case_stat_suffix: " h/an",
       case_situation_label: "Situation",
       case_situation: "La planification des expéditions sur le site de Grange Castle reposait encore sur des tableurs Excel manuels, limitant la visibilité inter-sites et créant des incohérences de données.",
@@ -1347,6 +1414,16 @@
       case_tag5: "Collaboration PO/UX",
       case_result_label: "Résultat",
       case_result: "Une économie estimée de 416 heures par an, une meilleure visibilité inter-sites, et un retour très positif du métier, avec une forte adoption à Grange Castle et au-delà.",
+      case2_title: "Live Visual Stream Map (LVSM)",
+      case2_subtitle: "Ligne de produit Lorbrena · Ringaskiddy",
+      case2_stat_suffix: " d'économies",
+      case2_situation: "Aucune solution de visualisation de données connectée n'existait pour justifier, avec des preuves solides, l'investissement nécessaire pour faire évoluer le suivi des stocks de la ligne Lorbrena.",
+      case2_action: "Conception et développement de la solution technique basée sur Neo4j pour Live Visual Stream Map (LVSM), en pilotant les premières démonstrations auprès des parties prenantes pour valider l'approche et obtenir l'approbation du budget.",
+      case2_tag1: "Conception produit",
+      case2_tag2: "Neo4j / graph data",
+      case2_tag3: "Démonstrations aux parties prenantes",
+      case2_tag4: "Business case",
+      case2_result: "Obtention de 640 000 € de budget de mise en œuvre, posant les bases d'une économie estimée à 2,3 M$ en inventaire pour la ligne de produit Lorbrena.",
       nav_formacion: "Formation",
       nav_adicional: "Informations complémentaires",
       nav_contacto: "Contact",
@@ -1390,6 +1467,7 @@
       j1b3: "Présentation régulière de recommandations basées sur les données à la direction et aux équipes d'encadrement transverses (Manufacturing, Digital, Analytics, Operational Excellence).",
       j1b4: "Pilotage de l'évaluation des opportunités d'IA agentique et d'automatisation pour accélérer la production d'insights et améliorer l'efficacité analytique.",
       j1b5: "Définition de standards de gouvernance (IMEx) permettant une mesure comparable des initiatives d'amélioration à l'échelle du réseau mondial.",
+      j1b6: "Responsable de bout en bout de Live Visual Stream Map (LVSM) à Ringaskiddy pour la ligne de produit Lorbrena : conception fonctionnelle, solution technique basée sur Neo4j, et premières démonstrations auprès des parties prenantes ayant permis d'obtenir 640 000 € de budget de mise en œuvre et de poser les bases d'une économie estimée à 2,3 M$ en inventaire.",
       j2b1: "Pilotage technique de Shipping Dashboard, une initiative de digitalisation de la chaîne logistique ayant remplacé la planification des expéditions sur tableurs, améliorant la visibilité inter-sites et générant une économie estimée de 416 heures par an.",
       j2b2: "Conception de modèles de données SQL et de rapports pour plusieurs tableaux de bord de performance industrielle, améliorant la traçabilité et la visibilité pour la direction.",
       j2b3: "Utilisation de Python, SQL, Neo4j, Snowflake et Apache Airflow pour construire des solutions analytiques évolutives.",
@@ -1538,6 +1616,19 @@
       });
     }
   }catch(e){ /* clipboard not available, link still works */ }
+
+  // Featured case tabs
+  try{
+    document.querySelectorAll('.case-tab').forEach(function(tab){
+      tab.addEventListener('click', function(){
+        var target = tab.getAttribute('data-case-tab');
+        document.querySelectorAll('.case-tab').forEach(function(t){ t.classList.toggle('active', t === tab); });
+        document.querySelectorAll('.case-panel').forEach(function(panel){
+          panel.hidden = panel.getAttribute('data-case-panel') !== target;
+        });
+      });
+    });
+  }catch(e){ /* non-critical */ }
 
   // Experience filters
   var chips = document.querySelectorAll('.chip');
