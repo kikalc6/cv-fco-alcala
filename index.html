@@ -195,6 +195,10 @@
     border-radius: var(--radius);
     cursor: pointer;
     transition: border-color .15s ease, color .15s ease;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
   }
 
   .print-btn:hover{ border-color: var(--gold); color: var(--text); }
@@ -860,7 +864,7 @@
         <span>English — <b data-i18n="lang_prof_en">Fluido</b></span>
         <span>Français — <b data-i18n="lang_prof_fr">Fluido</b></span>
       </div>
-      <button class="print-btn" onclick="window.print()" data-i18n="print_btn">Guardar como PDF</button>
+      <a class="print-btn" href="Francisco_Alcala_CV.pdf" download="Francisco_Alcala_CV.pdf" data-i18n="print_btn">Descargar CV en PDF</a>
     </div>
   </aside>
 
@@ -1328,7 +1332,7 @@
       lang_native: "Native",
       lang_prof_en: "Fluent",
       lang_prof_fr: "Fluent",
-      print_btn: "Save as PDF",
+      print_btn: "Download CV (PDF)",
       hero_profile: "More than ten years turning complex, multi-source data into clear decisions for business leaders. Strong SQL and BI background (Power BI, Tableau, SAP BO, Snowflake, Python), with real experience presenting data-driven recommendations to leadership and driving decisions across global organisations. Certified ScrumMaster® and SAFe® Product Owner, with professional fluency in Spanish, English and French.",
       kpi1: "years turning data into decisions",
       kpi2: "manufacturing users served by CI Loop",
@@ -1456,7 +1460,7 @@
       lang_native: "Natif",
       lang_prof_en: "Courant",
       lang_prof_fr: "Courant",
-      print_btn: "Enregistrer en PDF",
+      print_btn: "Télécharger le CV (PDF)",
       hero_profile: "Plus de dix ans passés à transformer des données complexes et multi-sources en décisions claires pour des dirigeants. Solides bases en SQL et BI (Power BI, Tableau, SAP BO, Snowflake, Python), avec une véritable expérience de présentation de recommandations basées sur les données auprès de comités de direction, et de contribution à des décisions stratégiques au sein d'organisations mondiales. Certified ScrumMaster® et SAFe® Product Owner, avec une maîtrise professionnelle de l'espagnol, de l'anglais et du français.",
       kpi1: "ans à transformer la donnée en décisions",
       kpi2: "utilisateurs en sites de fabrication servis par CI Loop",
