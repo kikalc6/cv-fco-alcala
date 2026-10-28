@@ -77,7 +77,6 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .id-header{
@@ -135,8 +134,18 @@
     color: var(--ink);
   }
 
+  .lang-switch-float{
+    position: fixed;
+    top: calc(18px + env(safe-area-inset-top, 0px));
+    right: calc(18px + env(safe-area-inset-right, 0px));
+    background: var(--panel);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    z-index: 60;
+    margin-top: 0;
+  }
+
   .rail-nav{
-    margin-top: 26px;
+    margin-top: 44px;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -146,7 +155,7 @@
     text-decoration: none;
     color: var(--muted);
     font-size: 14px;
-    padding: 9px 10px;
+    padding: 7px 10px;
     margin: 0 -10px;
     border-radius: var(--radius);
     transition: color .15s ease, background .15s ease;
@@ -172,7 +181,13 @@
 
   .rail-nav a.active::before{ background: var(--gold); }
 
-  .rail-bottom{ font-size: 12px; color: var(--muted); }
+  .rail-bottom{
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
 
   .rail-bottom .langs{
     display: flex;
@@ -721,7 +736,7 @@
       height: auto;
       border-right: none;
       border-bottom: 1px solid var(--line);
-      padding: 24px 24px 18px;
+      padding: 24px 118px 18px 24px;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
@@ -729,7 +744,10 @@
       flex-wrap: wrap;
     }
     .rail-top{ display: flex; align-items: center; gap: 18px; flex-wrap: wrap; min-width: 0; width: 100%; }
-    .lang-switch{ margin-top: 0; }
+    .lang-switch-float{
+      top: calc(14px + env(safe-area-inset-top, 0px));
+      right: calc(14px + env(safe-area-inset-right, 0px));
+    }
     .rail-nav{
       margin-top: 0;
       flex-direction: row;
@@ -839,12 +857,6 @@
         <div class="id-mark">Francisco Alcalá</div>
       </div>
       <div class="id-role">Digital Product Owner<br>Senior Insights Analyst</div>
-
-      <div class="lang-switch" role="group" aria-label="Idioma / Language / Langue">
-        <button data-lang="en" class="active">EN</button>
-        <button data-lang="es">ES</button>
-        <button data-lang="fr">FR</button>
-      </div>
 
       <nav class="rail-nav">
         <a href="#perfil" class="active" data-i18n="nav_perfil">Perfil</a>
@@ -1281,6 +1293,12 @@
     </section>
 
   </main>
+</div>
+
+<div class="lang-switch lang-switch-float" role="group" aria-label="Idioma / Language / Langue">
+  <button data-lang="en" class="active">EN</button>
+  <button data-lang="es">ES</button>
+  <button data-lang="fr">FR</button>
 </div>
 
 <script>
